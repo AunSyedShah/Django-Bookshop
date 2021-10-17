@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'home/head.html'%}
+
+<body>
+    <div class="container d-grid">
+        {% include 'home/header.html'%}
+
+        {% block content %}
+        {% endblock %}
+
+        {% include 'home/footer.html' %}
+    </div>
+</body>
+
+</html>
