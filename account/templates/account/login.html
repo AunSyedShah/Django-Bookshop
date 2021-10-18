@@ -1,0 +1,33 @@
+{% extends 'home/default.html' %}
+{% block content%}
+<main>
+    <div class="form">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h2>Login</h2>
+            {% if form.errors %}
+                {% for field, errors in form.errors.items %}
+                    {{ errors }}
+                {% endfor %}
+            {% endif %}
+
+        {% if form %}
+            {% for field in form %}
+                <label for="{{field.label}}">
+                    {{ field }}
+                    <span>{{ field.label }}</span>
+                </label>
+            {% endfor %}
+        {% endif %}
+            <button type="submit" name="button">Login</button>
+
+            <div class="form-help">
+                <small>
+                    <p>Did not have an account? <a href="#">Register</a></p>
+                    <p>Forget Password? <a href="#">Reset Password</a></p>
+                </small>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock%}
