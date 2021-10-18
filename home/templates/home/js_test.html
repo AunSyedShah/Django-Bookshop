@@ -3,9 +3,16 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bootstrap Test</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </head>
 <body>
-<script src="{% static 'home/js/main.js' %}"></script>
+<div class="container">
+    <div class="alert alert-success my-1" role="alert">
+        Bootstrap is working
+    </div>
+</div>
+
 </body>
 </html>
