@@ -28,3 +28,18 @@ class User(AbstractBaseUser, PermissionsMixin):
         full_name = self.first_name + " " + self.last_name
         return full_name.strip()
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    country = models.CharField(max_length=50,blank=True)
+    province = models.CharField(max_length=30,blank=True)
+    city = models.CharField(max_length=15,blank=True)
+    phone_number = models.CharField(max_length=20,blank=True)
+    address = models.CharField(max_length=200,blank=True)
+
+    def __str__(self):
+        return self.user.get_full_name()
+
+
+
+
+    
