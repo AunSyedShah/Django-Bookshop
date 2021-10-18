@@ -3,7 +3,13 @@
 <main>
     <div class="form">
         <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
             <h2>Register</h2>
+            {% if reg_form.errors %}
+                {% for field, errors in reg_form.errors.items %}
+                    {{ errors }}
+                {% endfor %}
+            {% endif %}
             <label for="{{ reg_form.first_name.label }}">
                 {{ reg_form.first_name }}
                 <span>{{ reg_form.first_name.label }}</span>
@@ -37,7 +43,7 @@
                 {{ reg_form.password2 }}
                 <span>{{ reg_form.password2.label }}</span>
             </label>
-            <button type="button" name="button">Register</button>
+            <button type="submit" name="button">Register</button>
             <div class="form-help">
                 <small>
                     <p>Already registered? <a href="#">Login</a></p>
