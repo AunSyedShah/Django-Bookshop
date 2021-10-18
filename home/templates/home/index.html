@@ -2,6 +2,10 @@
 {% load static %}
 {% block content%}
 <main>
-    <div class="main-bg-img" style="background-image: url('{% static 'images/home-books.jpg' %}');"></div>
+    <div class="main-bg-img" style="background-image: url('{% static 'images/home-books.jpg' %}');">
+    {% if user.is_authenticated %}
+    <h2>Wellcome {{ user.get_full_name }}</h2>
+    {% endif %}
+    </div>
 </main>
 {% endblock%}
