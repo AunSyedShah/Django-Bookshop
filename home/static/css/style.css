@@ -79,6 +79,11 @@ a.login:hover{
     background-size: cover;
     height: 100%;
 }
+.main-bg-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 footer div{
     height: 100%;
     justify-content: center;
