@@ -1,0 +1,49 @@
+{% extends 'home/default.html' %}
+{% block content%}
+<main>
+    <div class="form">
+        <form action="{% url 'register' %}" method="post">
+            <h2>Register</h2>
+            <label for="{{ reg_form.first_name.label }}">
+                {{ reg_form.first_name }}
+                <span>{{ reg_form.first_name.label }}</span>
+            </label>
+
+            <label for="{{ reg_form.last_name.label }}">    
+                {{ reg_form.last_name }}
+                <span>{{ reg_form.last_name.label }}</span>
+            </label>
+
+            <label for="{{ reg_form.email.label }}">
+                {{ reg_form.email }}
+                <span>{{ reg_form.email.label }}</span>
+            </label>
+
+            {% for field in pro_form %}
+            <label for="{{field.label}}">
+                {{ field }}
+                <span>{{ field.label }}</span>
+            </label>
+            {% endfor %}
+
+            <label for="{{ reg_form.password1.label }}">
+                {{ reg_form.password1 }}
+                <span>{{ reg_form.password1.label }}</span>
+            </label>
+            <div class="helptext">
+                {{reg_form.password1.help_text }}
+            </div>
+            <label for="{{ reg_form.password2.label }}">
+                {{ reg_form.password2 }}
+                <span>{{ reg_form.password2.label }}</span>
+            </label>
+            <button type="button" name="button">Register</button>
+            <div class="form-help">
+                <small>
+                    <p>Already registered? <a href="#">Login</a></p>
+                </small>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock%}
