@@ -11,12 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-<<<<<<< HEAD
 from decouple import config, Csv
-=======
-import os
-
->>>>>>> 21c449ad0abda7485173b63278ed68fe7a72a48c
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
