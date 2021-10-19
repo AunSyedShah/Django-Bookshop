@@ -1,6 +1,7 @@
 :root{
     --primary-color: #F7F6F2;
     --second-primary-color: #2C394B;
+    --btn-hover-color: #082032;
     --font-color: #2C394B;
 }
 
@@ -69,13 +70,123 @@ a.login{
     padding: 8px 20px;
     border-radius: 6px;
 }
+a.login:hover{
+    background-color: var(--btn-hover-color);
+
+}
 .main-bg-img{
     background-position: center;
     background-size: cover;
     height: 100%;
 }
+.main-bg-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 footer div{
     height: 100%;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
+}
+
+/* Form */
+.form{
+  margin: 50px auto;
+  width: 50vw;
+
+}
+
+.form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding:30px;
+  width: 100%;
+}
+.errorlist{
+  margin:20px 0;
+  list-style: none;
+}
+
+.errorlist li{
+  padding:10px 12px;
+  margin-bottom: 10px;
+  background-color: #DA7F8F;
+  border-radius:6px;
+  color: var(--font-color);
+}
+.form label{
+  width: 400px;
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.form label input{
+  margin-top: 20px;
+  border:none;
+  outline: none;
+  padding:10px 0;
+  width: 100%;
+}
+
+input::placeholder{
+  opacity: 0;
+}
+.form label span{
+  position: absolute;
+  top:0;
+  left: 0;
+  transform:translateY(30px);
+  font-size:0.825em;
+  transition-duration:300ms;
+}
+
+label:focus-within > span,
+input:not(:placeholder-shown) + span{
+    color:var(--second-primary-color);
+    font-weight: 600;
+    transform:translateY(0px);
+}
+input:focus {
+  border:1px solid red;
+}
+/* form help text */
+
+.helptext{
+  width: 400px;
+  margin-bottom:50px;
+  margin-top: 20px;
+}
+.helptext ul{
+  list-style: none;
+}
+.helptext ul li{
+  padding:15px 0 15px 10px;
+  margin-bottom: 8px;
+  background-color: #D4ECDD;
+  border-radius:6px;
+  color: var(--font-color);
+}
+.form button{
+  padding:10px 15px;
+  border: none;
+  outline: none;
+  background-color: var(--second-primary-color);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 200px;
+
+}
+.form button:hover{
+  background-color: var(--btn-hover-color);
+}
+.form-help{
+  margin-top: 20px;
 }

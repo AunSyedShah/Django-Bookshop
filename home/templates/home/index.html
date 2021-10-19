@@ -1,7 +1,11 @@
 {% extends 'home/default.html' %}
 {% load static %}
-{% block content %}
-    <main xmlns="">
-        <div class="main-bg-img" style="background-image: url('{% static 'home/images/home-books.jpg' %}');"></div>
-    </main>
-{% endblock %}
+{% block content%}
+<main>
+    <div class="main-bg-img" style="background-image: url('{% static 'home/images/home-books.jpg' %}');">
+    {% if user.is_authenticated %}
+    <h2>Wellcome {{ user.get_full_name }}</h2>
+    {% endif %}
+    </div>
+</main>
+{% endblock%}
