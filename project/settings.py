@@ -27,8 +27,6 @@ DEBUG = config("DEBUG_VALUE")
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast= Csv())
 
-ALLOWED_HOSTS = ["*"]
-
 # Application definition
 
 INSTALLED_APPS = [
