@@ -141,7 +141,7 @@ input::placeholder{
   top:0;
   left: 0;
   transform:translateY(30px);
-  font-size:0.825em;
+  font-size:1em;
   transition-duration:300ms;
 }
 
