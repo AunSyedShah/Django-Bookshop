@@ -3,6 +3,7 @@
     --second-primary-color: #2C394B;
     --btn-hover-color: #082032;
     --font-color: #2C394B;
+    --font-Oxygen: 'Oxygen', sans-serif;
 }
 
 
@@ -13,7 +14,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Tahuma', 'nunito';
+    font-family: var(--font-Oxygen);
 }
 .d-grid{display: grid;}
 .d-flex{display: flex;}
