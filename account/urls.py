@@ -13,6 +13,10 @@ urlpatterns = [
         auth_views.PasswordResetView.as_view(template_name="account/password-reset.html", form_class = CustomPasswordResetForm),
         name="password-reset-request"),
 
+    path('password-reset-done/', auth_views.PasswordResetDoneView.as_view(template_name="account/password-reset-done.html"),
+        name="password_reset_done"),
+        
+
     path("account/logout/", auth_views.LogoutView.as_view(),name="logout"),
     
     
