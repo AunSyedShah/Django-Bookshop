@@ -6,8 +6,12 @@
         <nav>
             <ul>
                 <li><a href="#">Books</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="{% url 'login' %}" class="login">Login</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" class="login">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}" class="login">Login</a></li>
+                {% endif %}
             </ul>
         </nav>
     </div>
