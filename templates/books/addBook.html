@@ -5,6 +5,10 @@
     <title>Add Book</title>
 </head>
 <body>
-{{ form.as_p }}
+<form>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
 </body>
 </html>
